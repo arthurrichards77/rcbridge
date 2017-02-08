@@ -1,0 +1,27 @@
+<launch>
+
+  <arg name="rcbridge_ip" />
+  <arg name="drone_frame" />
+
+  <!-- optional args: can turn on PID tuning -->
+  <arg name="tuning" default="False" />
+
+  <include file="$(find vicon_bridge)/launch/vicon.launch" />
+
+  <!-- need target and in separate namespace to avoid control panel conflicts -->
+  <!-- in particular the "drone_name" parameter -->
+  <include ns="target" file="$(find brl_drones)/launch/single_virtual.launch">
+    <arg name="drone_name" value="target" />
+    <arg name="use_panel" value="true" />
+  </include>
+
+  <include file="$(find rcbridge)/launch/qav250_follow_tf.launch">
+    <arg name="drone_frame" value="$(arg drone_frame)"/>
+    <arg name="rcbridge_ip" value="$(arg rcbridge_ip)" />
+    <arg name="target_frame" value="target_hull" />
+    <arg name="tuning" value="$(arg tuning)" />
+  </include>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find brl_drones)/urdf/drones.rviz" respawn="true" />
+
+</launch>

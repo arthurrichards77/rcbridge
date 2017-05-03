@@ -9,7 +9,7 @@
   <include file="$(find vicon_bridge)/launch/vicon.launch" />
 
   <param name="static_frame" value="world" />
-  <param name="pointer_frame" value="vicon/WoodPointer/WoodPointer" />
+  <param name="pointer_frame" value="vicon/WoodenWand/WoodenWand" />
   <param name="drone_frame" value="$(arg drone_frame)" />
   <node name="pointer_control" pkg="brl_drones" type="pointer_ctrl.py" output="screen" />
 

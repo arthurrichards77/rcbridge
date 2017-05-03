@@ -1,0 +1,8 @@
+<launch>
+
+  <include file="$(find rcbridge)/launch/qav250_follow_pointer.launch">
+    <arg name="drone_frame" value="QAV_yellow"/>
+    <arg name="rcbridge_ip" value="192.168.10.172" />    
+  </include>
+
+</launch>

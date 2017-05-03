@@ -41,7 +41,7 @@
       <param name="height/init_gains/kp" type="double" value="0.2" />
       <param name="height/init_gains/ki" type="double" value="0.03" />
       <param name="height/init_gains/kd" type="double" value="0.2" />
-      <param name="height/init_limits/upper" type="double" value="0.9" />
+      <param name="height/init_limits/upper" type="double" value="0.7" />
       <param name="height/init_limits/lower" type="double" value="-0.9" />
       
       <remap from="ctrl_vel" to="rcctrl" />

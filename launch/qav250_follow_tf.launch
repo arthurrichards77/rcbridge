@@ -18,16 +18,16 @@
 
   <node pkg="brl_drones" name="control" type="drone_tf_follow.py" >
 
-      <param name="pitch/init_gains/kp" type="double" value="0.2" />
-      <param name="pitch/init_gains/ki" type="double" value="0.02" />
-      <param name="pitch/init_gains/kd" type="double" value="0.2" />
+      <param name="pitch/init_gains/kp" type="double" value="0.1" />
+      <param name="pitch/init_gains/ki" type="double" value="0.01" />
+      <param name="pitch/init_gains/kd" type="double" value="0.1" />
       <param name="pitch/init_limits/upper" type="double" value="0.4" />
       <param name="pitch/init_limits/lower" type="double" value="-0.4" />
 
       <!-- RC transmitter sign convention requires negative gain on the roll channel -->
-      <param name="roll/init_gains/kp" type="double" value="-0.2" />
-      <param name="roll/init_gains/ki" type="double" value="-0.02" />
-      <param name="roll/init_gains/kd" type="double" value="-0.2" />
+      <param name="roll/init_gains/kp" type="double" value="-0.1" />
+      <param name="roll/init_gains/ki" type="double" value="-0.01" />
+      <param name="roll/init_gains/kd" type="double" value="-0.1" />
       <param name="roll/init_limits/upper" type="double" value="0.4" />
       <param name="roll/init_limits/lower" type="double" value="-0.4" />
 
